@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Registration Form</title>
+</head>
+<body>
+  <h1>Student Registration Form</h1>
+
+  <form action="#" method="post" enctype="multipart/form-data" autocomplete="on">
+    <!-- Personal details -->
+    <fieldset>
+      <legend>Personal Details</legend>
+
+      <label for="fullName">Full Name:</label><br />
+      <input type="text" id="fullName" name="fullName" placeholder="e.g. Supriya Rasal" required /><br /><br />
+
+      <label for="rollNo">Roll Number:</label><br />
+      <input type="text" id="rollNo" name="rollNo" placeholder="e.g. 23B001" required /><br /><br />
+
+      <label for="class">Class / Grade:</label><br />
+      <input type="text" id="class" name="class" placeholder="e.g. 10th / FY BSc" required /><br /><br />
+
+      <label for="dob">Date of Birth:</label><br />
+      <input type="date" id="dob" name="dob" required /><br /><br />
+
+      <label>Gender:</label><br />
+      <input type="radio" id="genderMale" name="gender" value="Male" required />
+      <label for="genderMale">Male</label>
+      <input type="radio" id="genderFemale" name="gender" value="Female" />
+      <label for="genderFemale">Female</label>
+      <input type="radio" id="genderOther" name="gender" value="Other" />
+      <label for="genderOther">Other</label><br /><br />
+    </fieldset>
+
+    <!-- Contact info -->
+    <fieldset>
+      <legend>Contact Information</legend>
+
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" placeholder="you@example.com" required /><br /><br />
+
+      <label for="phone">Phone (10 digits):</label><br />
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="9876543210"
+        pattern="[0-9]{10}"
+        inputmode="numeric"
+        required
+      /><br /><br />
+
+      <label for="address">Address:</label><br />
+      <textarea id="address" name="address" rows="3" cols="30" placeholder="Street, City, State, PIN" required></textarea><br /><br />
+    </fieldset>
+
+    <!-- Academic / guardian -->
+    <fieldset>
+      <legend>Academic & Guardian</legend>
+
+      <label for="stream">Stream / Subject:</label><br />
+      <select id="stream" name="stream" required>
+        <option value="">-- Select --</option>
+        <option>Science</option>
+        <option>Commerce</option>
+        <option>Arts</option>
+        <option>Computer Science</option>
+        <option>Other</option>
+      </select><br /><br />
+
+      <label for="subjects">Selected Subjects (tick as applicable):</label><br />
+      <input type="checkbox" id="sub1" name="subjects" value="Maths" />
+      <label for="sub1">Maths</label>
+      <input type="checkbox" id="sub2" name="subjects" value="Physics" />
+      <label for="sub2">Physics</label>
+      <input type="checkbox" id="sub3" name="subjects" value="Chemistry" />
+      <label for="sub3">Chemistry</label>
+      <input type="checkbox" id="sub4" name="subjects" value="English" />
+      <label for="sub4">English</label>
+      <input type="checkbox" id="sub5" name="subjects" value="Computer" />
+      <label for="sub5">Computer</label><br /><br />
+
+      <label for="guardianName">Guardian / Parent Name:</label><br />
+      <input type="text" id="guardianName" name="guardianName" placeholder="Parent / Guardian full name" required /><br /><br />
+
+      <label for="guardianPhone">Guardian Phone:</label><br />
+      <input type="tel" id="guardianPhone" name="guardianPhone" pattern="[0-9]{10}" placeholder="9876543210" required /><br /><br />
+    </fieldset>
+
+    <!-- Uploads and declarations -->
+    <fieldset>
+      <legend>Uploads & Declaration</legend>
+
+      <label for="photo">Upload Photo (jpg/png, max recommended 2MB):</label><br />
+      <input type="file" id="photo" name="photo" accept="image/png, image/jpeg" /><br /><br />
+
+      <label for="idProof">Upload ID Proof (optional):</label><br />
+      <input type="file" id="idProof" name="idProof" accept=".pdf,image/*" /><br /><br />
+
+      <input type="checkbox" id="agree" name="agree" required />
+      <label for="agree">I hereby declare that the information provided is true and correct.</label><br /><br />
+    </fieldset>
+
+    <!-- Form controls -->
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </form>
+</body>
+</html>
